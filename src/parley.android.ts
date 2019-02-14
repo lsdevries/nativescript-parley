@@ -30,7 +30,7 @@ export class Parley extends ParleyBase {
     static init(listener: ParleyListener, appSecret: string): void {
         Parley.getInstance().setListener(listener);
 
-        console.log("ParleyAndroid.init", listener, appSecret);
+        // console.log("ParleyAndroid.init", listener, appSecret);
 
         ParleyNative.init(app.android.context, parleyNativeListener, appSecret, true);
         ParleyNative.getInstance().setToolbarEnabled(new java.lang.Boolean(false));
